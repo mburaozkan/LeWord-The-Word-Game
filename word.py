@@ -1,4 +1,4 @@
-from english_words import english_words_alpha_set
+from english_words import get_english_words_set
 from colorama import Fore
 import random
 
@@ -11,7 +11,7 @@ class Word:
     def pick_random_word(letter_count, word_count=1):
 
         # uses english_word library to create a list of words
-        r = [i for i in english_words_alpha_set]
+        r = [i for i in get_english_words_set(['web2'], lower=True)]
 
         # looks for single or multi word mode
         if word_count == 1:

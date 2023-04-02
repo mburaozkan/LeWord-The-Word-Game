@@ -97,7 +97,7 @@ class Input:
                 return "JOKER"
 
             # checks if the word is meaningful or not
-            check_word = (lambda word: word.lower() in [i.lower() for i in english_words.english_words_alpha_set])
+            check_word = (lambda word: word.lower() in [i.lower() for i in english_words.get_english_words_set(['web2'], lower=True)])
 
             # checks if the word length is valid or not
             if type(guru) != str or len(guru) != length:
